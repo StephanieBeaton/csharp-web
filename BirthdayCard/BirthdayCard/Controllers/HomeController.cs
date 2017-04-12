@@ -9,11 +9,6 @@ namespace BirthdayCard.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
-        //public string Index()
-        //{
-        //    return "Hello World";
-        //}
 
         // GET: Home
         public ActionResult Index()
@@ -27,8 +22,8 @@ namespace BirthdayCard.Controllers
             var myBirthdayMessage = new BirthdayMessage
             {
                 BirthdayMessageId = 1,
-                To = "George@test.com",
-                From = "Katherine@test.com",
+                To = "George",
+                From = "Katherine",
                 MessageBody = "Hippy Birthday!"
             };
             return View(myBirthdayMessage);

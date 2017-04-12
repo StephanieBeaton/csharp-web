@@ -2,6 +2,8 @@
 
 @{
     ViewBag.Title = "Birthday Card generator";
+    Layout = null;
+
 }
 
 <!DOCTYPE html>
@@ -9,28 +11,81 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
-    <style>
-        .btn a {
-            color: white;
-            text-decoration: none;
-        }
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 
-        body {
-            background-color: #f1f1f1;
-        }
-    </style>
     <title>Birthday Card Sent</title>
 </head>
-<body>
-    <div> 
-        <h4>Birthday Card Sent</h4>
 
-        <p>To: @Model.To</p>
-        <p>From: @Model.From</p>
-        <p>Message: @Model.MessageBody</p>
 
-    </div>
-</body>
+        @switch (Model.CardType)
+        {
+            case 1:
+                <body class="little-girl">
+
+                    <div class="element-align-bottom-left">
+                        <h4>Message: @Model.MessageBody</h4>
+                        <p>To: @Model.To  From: @Model.From</p>
+                    </div>
+
+                </body>
+                break;
+            case 2:
+                <body class="little-boy">
+
+                    <div class="element-align-bottom-center">
+                        <h4>Message: @Model.MessageBody</h4>
+                        <p>To: @Model.To  From: @Model.From</p>
+                    </div>
+
+                </body>
+                break;
+            case 3:
+                <body class="husband">
+
+                    <div class="element-align-top-left font-color-black">
+                        <h4>Message: @Model.MessageBody</h4>
+                        <p>To: @Model.To</p>
+                        <p>From: @Model.From</p>
+                    </div>
+
+                </body>
+                break;
+            case 4:
+                <body class="grandma">
+
+                    <div class="element-align-top-left">
+                        <h4>Message: @Model.MessageBody</h4>
+                        <p>To: @Model.To</p>
+                        <p>From: @Model.From</p>
+                    </div>
+
+                </body>
+                break;
+            case 5:
+                <body class="boss">
+
+                    <div class="element-align-top-left font-color-black">
+                        <h4>Message: @Model.MessageBody</h4>
+                        <p>To: @Model.To</p>
+                        <p>From: @Model.From</p>
+                    </div>
+
+                </body>
+                break;
+            default:
+                <body>
+                    <div>
+                        <h4>Birthday Card Sent</h4>
+
+                        <p>To: @Model.To</p>
+                        <p>From: @Model.From</p>
+                        <p>Message: @Model.MessageBody</p>
+
+                        <p>Default card type</p>
+                    </div>
+                </body>
+                break;
+        }
+
 </html>

@@ -5,3 +5,83 @@
 .input-validation-error { border: 1px solid #f00;background-color: #fee;}
 .validation-summary-errors { font-weight: bold;color: #f00;}
 .validation-summary-valid { display: none;}
+
+.little-girl { 
+  background: url(../images/little-girl.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.little-boy { 
+  background: url(../images/little-boy.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.husband { 
+  background: url(../images/husband.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.grandma { 
+  background: url(../images/grandma.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.boss { 
+  background: url(../images/The-Office-Wallpaper-HD.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.element-align-bottom-left {
+    position: fixed;
+    text-align: left;
+    bottom: 0;  
+    width: 100%;
+    color: black;
+}
+
+.element-align-top-left {
+    position: fixed;
+    text-align: left;
+    top: 0;  
+    width: 100%;
+    color: white;
+}
+
+.font-color-black {
+    color: black;
+}

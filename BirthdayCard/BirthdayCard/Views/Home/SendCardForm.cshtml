@@ -39,7 +39,15 @@
                   new { @class = "form-control", maxlength = 30, style = "width:200px;" })</p>
             <p><label>Message:</label> @Html.TextBoxFor(t => t.MessageBody,
                   new { @class = "form-control", maxlength = 300, style = "width:200px;" })</p>
-
+            <p><label>Card Type:</label> @Html.DropDownListFor(t => t.CardType, new[]
+              {
+                new SelectListItem { Text="Card for little girl", Value="1"},
+                new SelectListItem{ Text="Card for little boy", Value="2"},
+                new SelectListItem{ Text="Card for husband", Value="3"},
+                new SelectListItem{ Text="Card for grandma", Value="4"},
+                new SelectListItem{ Text="Card for boss", Value="5"},
+               }, "Choose a birthday card type")
+            </p>
             <input class="btn btn-success" type="submit" value="Send Card" />
         }
 
