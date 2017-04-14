@@ -4,6 +4,12 @@ MyFullMVC/
 packages/
 HelloWorld.sln
 MyFullMVC.sln
+BirthdayCard/
 BirthdayCard/BirthdayCard/bin/
 BirthdayCard/BirthdayCard/obj/
 BirthdayCard/packages/
+TheLearningCenter/bin/
+TheLearningCenter/obj/
+TheLearningCenter.Tests/bin/
+TheLearningCenter.Tests/obj/
+TheLearningCenter/Scripts/
