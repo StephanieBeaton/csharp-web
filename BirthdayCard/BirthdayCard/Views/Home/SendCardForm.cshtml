@@ -12,7 +12,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
     <style>
         .btn a {
             color: white;
@@ -27,8 +27,10 @@
 
 </head>
 <body>
-    <div> 
-        @using (Html.BeginForm())
+       <div class='test'>
+           Testing
+       </div>
+       @using (Html.BeginForm())
         {
             <h4 class="panel-heading text-center">Send a Birthday Card</h4>
             @Html.ValidationSummary()
@@ -51,6 +53,5 @@
             <input class="btn btn-success" type="submit" value="Send Card" />
         }
 
-    </div>
 </body>
 </html>

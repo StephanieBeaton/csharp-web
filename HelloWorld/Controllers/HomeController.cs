@@ -34,8 +34,17 @@ namespace HelloWorld.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            int x = 1;  // add me
-            //x = x / (x - 1); // add me
+            try
+            {
+                int x = 1;  // add me
+                x = x / (x - 1); // add me
+            }
+            catch (DivideByZeroException ex)
+            {
+                // ignore exception
+                // log the exception to a log file
+                // send an email to the developer team
+            }
 
             return View();
         }
