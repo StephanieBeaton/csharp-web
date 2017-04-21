@@ -1,0 +1,32 @@
+﻿@model TheLearningCenter.Models.ClassMasterViewModel
+@{
+    ViewBag.Title = "Classes Master";
+}
+<div>
+    <h1>Classes</h1>
+</div>
+
+@if (Model.ClassMasters.Length > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        @foreach (var classMaster in Model.ClassMasters)
+        {
+            <tr>
+                <td>@classMaster.Name</td>
+                <td>@classMaster.Description</td>
+                <td>@classMaster.Price</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h2>No class data found.</h2>
+}

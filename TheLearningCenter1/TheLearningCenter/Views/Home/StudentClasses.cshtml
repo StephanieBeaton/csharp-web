@@ -1,0 +1,47 @@
+﻿@model TheLearningCenter.Models.UserClassModel[]
+@{
+    ViewBag.Title = "Student Classes";
+}
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Classes</title>
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>
+
+<div>
+    <h1>Student Classes</h1>
+</div>
+
+@if (Model.Length > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th>Class Id</th>
+            </tr>
+        </thead>
+        @foreach (var userClass in Model)
+        {
+            <tr>
+                <td>@userClass.UserId</td>
+                <td>@userClass.ClassId</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h2>No classes found for this User.</h2>
+}

@@ -1,0 +1,34 @@
+﻿@model TheLearningCenter.Models.EnrollInClassViewModel
+
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Enroll In Class</title>
+</head>
+<body>
+    <div>
+        <h1>Enroll In Class</h1>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <p>
+            <select id="ClassId" name="ClassId">
+                <option value="">Choose a class</option>
+                @foreach (var classMaster in Model.ClassMasters)
+                {
+                <option value=@classMaster.Id.ToString()>@classMaster.Name</option>
+                }
+            </select>
+            <input type="submit" value="Add Class" />
+        </p>
+        <p>UserId: @Html.TextBoxFor(t => t.UserId)</p>
+    }
+</body>
+</html>
