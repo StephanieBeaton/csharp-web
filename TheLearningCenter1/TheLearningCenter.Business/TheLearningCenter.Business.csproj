@@ -79,6 +79,7 @@
     <Compile Include="ClassMasterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserClassManager.cs" />
+    <Compile Include="UserLoginManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TheLearningCenter.Repository\TheLearningCenter.Repository.csproj">

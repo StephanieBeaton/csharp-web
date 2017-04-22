@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TheLearningCenter.Repository;
+
+namespace TheLearningCenter.Business
+{
+    public interface IUserLoginManager
+    {
+        UserLoginModel Login(string username, string password);
+
+        UserLoginModel RegisterUser(string username, string password);
+    }
+
+    public class UserLoginModel
+    {
+        public string UserName { get; set; }
+        public string Password { get; set; }
+    }
+
+    class UserLoginManager : IUserLoginManager
+    {
+
+        private readonly IUserLoginRepository userLoginRepository;
+
+        public UserLoginManager(IUserLoginRepository userLoginRepository)
+        {
+            this.userLoginRepository = userLoginRepository;
+        }
+
+        public UserLoginModel Login(string username, string password)
+        {
+            var user = userLoginRepository.LogIn(username, password);
+
+            return new UserLoginModel { UserName = user.Email, Password = user.Password };
+        }
+
+        public UserLoginModel RegisterUser(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

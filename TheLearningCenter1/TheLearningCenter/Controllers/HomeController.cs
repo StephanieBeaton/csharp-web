@@ -9,11 +9,11 @@ using TheLearningCenter.Models;
 
 namespace TheLearningCenter.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IClassMasterManager classMasterManager;
         private readonly IUserClassManager userClassManager;
-
 
         public HomeController(IClassMasterManager classMasterManager,
                               IUserClassManager userClassManager)
@@ -23,7 +23,7 @@ namespace TheLearningCenter.Controllers
         }
         public ActionResult Index()
         { 
-            return View();   // ???
+            return View();   // Home page
         }
 
         //public int Id { get; set; }
@@ -63,9 +63,10 @@ namespace TheLearningCenter.Controllers
         public ActionResult StudentClasses()
         {
             //  ... Session["User"] not implemented yet
-            // var user = (TheLearningCenter.Models.UserModel)Session["User"];
+            var user = (TheLearningCenter.Models.UserModel)Session["User"];
 
-            int userId = 1;
+            //int userId = 1;
+
             //var userClasses = userClassManager.GetAll(userId)
             //             .Select(t => new TheLearningCenter.Models.UserClassModel(
             //                  t.UserId,
@@ -76,7 +77,7 @@ namespace TheLearningCenter.Controllers
             // return View(userClasses);
 
 
-            var studentClasses = userClassManager.GetAll(userId)
+            var studentClasses = userClassManager.GetAll(user.Id)
                           .Select(t => new TheLearningCenter.Models.StudentClassesViewModel(
                                t.UserId,
                                t.ClassId,
@@ -102,9 +103,13 @@ namespace TheLearningCenter.Controllers
                                   t.Sessions))
                             .ToArray();
 
+            // get Session["User"] 
+            var user = (TheLearningCenter.Models.UserModel)Session["User"];
+
             EnrollInClassViewModel enrollInClassModelData = new EnrollInClassViewModel
             {
-                ClassMasters = classes
+                ClassMasters = classes,
+                UserId = user.Id
             };
 
             return View(enrollInClassModelData);
@@ -113,24 +118,47 @@ namespace TheLearningCenter.Controllers
         [HttpPost]
         public ActionResult EnrollInClass(Models.EnrollInClassViewModel enrollInClassData)
         {
-            // insert new row into the database 
-            //  ... Session["User"] not implemented yet
-            // var user = (TheLearningCenter.Models.UserModel)Session["User"];
+            if (ModelState.IsValid)
+            {
+                // insert new row into the database 
+                var user = (TheLearningCenter.Models.UserModel)Session["User"];
 
-            var userClass = userClassManager.Add(enrollInClassData.UserId, enrollInClassData.ClassId);
+                var userClass = userClassManager.Add(user.Id, enrollInClassData.ClassId);
 
-            //  the below is done in StudentClasses
-            //var userClasses = userClassManager.GetAll(enrollInClassData.UserId)
-            //    .Select(t => new TheLearningCenter.Models.UserClassModel(t.UserId, t.ClassId))
-            //    .ToArray();
+                // NOTE:  userClass may be null if the User is already enrolled ??
 
-            //  Redirect ???
-            //  Dan Instructor comments
-            //  Post should almost always to a Redirect or RedirectToAction.
-            //  Because after they add the record 
-            //  ...you should show them that the record was added 
-            //  ...and then move to the home page or someplace where they can continue working.
-            return RedirectToAction("StudentClasses");
+
+                //  the below is done in StudentClasses
+                //var userClasses = userClassManager.GetAll(enrollInClassData.UserId)
+                //    .Select(t => new TheLearningCenter.Models.UserClassModel(t.UserId, t.ClassId))
+                //    .ToArray();
+
+                //  Redirect 
+                //  Dan Instructor comments
+                //  Post should almost always to a Redirect or RedirectToAction.
+                //  Because after they add the record 
+                //  ...you should show them that the record was added 
+                //  ...and then move to the home page or someplace where they can continue working.
+                return RedirectToAction("StudentClasses");
+            }
+            else
+            {
+                // enrollInClassData  is missing the list of classes at this point !
+
+                // get all the classes to populate the drop down in the form
+                var classes = classMasterManager.ClassMasters
+                                 .Select(t => new TheLearningCenter.Models.ClassMasterModel(t.Id,
+                                      t.Name,
+                                      t.Description,
+                                      t.Price,
+                                      t.Sessions))
+                                .ToArray();
+
+                enrollInClassData.ClassMasters = classes;
+
+                return View(enrollInClassData);
+            }
+ 
         }
 
         public ActionResult Contact()

@@ -18,6 +18,7 @@
 
     @using (Html.BeginForm())
     {
+        @Html.ValidationSummary()
         <p>
             <select id="ClassId" name="ClassId">
                 <option value="">Choose a class</option>
@@ -28,7 +29,6 @@
             </select>
             <input type="submit" value="Add Class" />
         </p>
-        <p>UserId: @Html.TextBoxFor(t => t.UserId)</p>
     }
 </body>
 </html>

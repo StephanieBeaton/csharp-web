@@ -189,6 +189,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\StudentClassesViewModel.cs" />
     <Compile Include="Models\UserClassModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -254,6 +255,7 @@
     <Content Include="Views\Home\ClassList.cshtml" />
     <Content Include="Views\Home\EnrollInClass.cshtml" />
     <Content Include="Views\Home\StudentClasses.cshtml" />
+    <Content Include="Views\Account\LoginMvcOriginal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

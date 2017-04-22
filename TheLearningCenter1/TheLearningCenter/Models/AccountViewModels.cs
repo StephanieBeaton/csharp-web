@@ -46,27 +46,43 @@ namespace TheLearningCenter.Models
         public string Email { get; set; }
     }
 
+    // from http://cstructor.com/Home/SNotes?classId=39&sequence=530
+
     public class LoginViewModel
     {
+        public int Id { get; set; }
+
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "User name")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-
-        [Display(Name = "Remember me?")]
-        public bool RememberMe { get; set; }
     }
+
+    //public class LoginViewModel
+    //{
+    //    [Required]
+    //    [Display(Name = "Email")]
+    //    [EmailAddress]
+    //    public string Email { get; set; }
+
+    //    [Required]
+    //    [DataType(DataType.Password)]
+    //    [Display(Name = "Password")]
+    //    public string Password { get; set; }
+
+    //    [Display(Name = "Remember me?")]
+    //    public bool RememberMe { get; set; }
+    //}
 
     public class RegisterViewModel
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "User name/Email")]
         public string Email { get; set; }
 
         [Required]

@@ -89,6 +89,7 @@
     <Compile Include="DatabaseAccessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserClassRepository.cs" />
+    <Compile Include="UserLoginRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

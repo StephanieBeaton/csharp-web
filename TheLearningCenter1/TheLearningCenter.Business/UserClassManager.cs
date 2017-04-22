@@ -13,7 +13,7 @@ namespace TheLearningCenter.Business
         UserClassModel Add(int userId, int classId);
         bool Remove(int userId, int classId);
         UserClassModel[] GetAll(int userId);
-        ClassMasterModel GetClass(int classId);
+        //ClassMasterModel GetClass(int classId);
     }
 
     public class UserClassModel
@@ -39,7 +39,7 @@ namespace TheLearningCenter.Business
             this.classMasterRepository.ClassMaster(1);
         }
 
-        public ClassMasterModel GetClass(int classId)
+        private ClassMasterModel GetClass(int classId)
         {
             TheLearningCenter.Repository.ClassMasterModel myClass = this.classMasterRepository.ClassMaster(classId);
 
