@@ -1,4 +1,4 @@
-﻿@model TheLearningCenter.Models.UserClassModel[]
+﻿@model TheLearningCenter.Models.StudentClassesViewModel[]
 @{
     ViewBag.Title = "Student Classes";
 }
@@ -8,16 +8,6 @@
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Student Classes</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
 
 <div>
     <h1>Student Classes</h1>
@@ -28,15 +18,17 @@
     <table>
         <thead>
             <tr>
-                <th>User Id</th>
-                <th>Class Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Paid</th>
             </tr>
         </thead>
-        @foreach (var userClass in Model)
+        @foreach (var studentClass in Model)
         {
             <tr>
-                <td>@userClass.UserId</td>
-                <td>@userClass.ClassId</td>
+                <td>@studentClass.ClassName</td>
+                <td>@studentClass.ClassDescription</td>
+                <td>@studentClass.ClassPaid</td>
             </tr>
         }
     </table>

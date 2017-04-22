@@ -12,18 +12,6 @@ namespace TheLearningCenter.Repository
         ClassMasterModel ClassMaster(int ClassMasterId);
     }
 
-    // from TheLearningCenter.SchoolDatabase
-    //      ... SchoolDatabase.edmx
-    //      ...   SchoolDatabase.tt
-    //      ...     ClassMaster.cs
-    //
-    //public int ClassId { get; set; }
-    //public string ClassName { get; set; }
-    //public string ClassDescription { get; set; }
-    //public double ClassPrice { get; set; }
-    //public int ClassSessions { get; set; }
-
-
     public class ClassMasterModel
     {
         public int Id { get; set; }

@@ -13,21 +13,37 @@ namespace TheLearningCenter.Business
         UserClassModel Add(int userId, int classId);
         bool Remove(int userId, int classId);
         UserClassModel[] GetAll(int userId);
+        ClassMasterModel GetClass(int classId);
     }
 
     public class UserClassModel
     {
         public int UserId { get; set; }
         public int ClassId { get; set; }
+        public string ClassName { get; set; }
+        public string ClassDescription { get; set; }
+        public double ClassPrice { get; set; }
     }
 
     class UserClassManager : IUserClassManager
     {
         private readonly IUserClassRepository userClassRepository;
+        private readonly IClassMasterRepository classMasterRepository;
 
-        public UserClassManager(IUserClassRepository userClassRepository)
+        public UserClassManager(IUserClassRepository userClassRepository,
+                                IClassMasterRepository classMasterRepository)
         {
             this.userClassRepository = userClassRepository;
+            this.classMasterRepository = classMasterRepository;
+
+            this.classMasterRepository.ClassMaster(1);
+        }
+
+        public ClassMasterModel GetClass(int classId)
+        {
+            TheLearningCenter.Repository.ClassMasterModel myClass = this.classMasterRepository.ClassMaster(classId);
+
+            return new ClassMasterModel(classId, myClass.Name, myClass.Description, myClass.Price, myClass.Sessions);
         }
 
         public UserClassModel Add(int userId, int classId)
@@ -42,11 +58,31 @@ namespace TheLearningCenter.Business
         {
             // throw new NotImplementedException();
 
+            // from cstructor.com
+            //    http://cstructor.com/Home/SNotes?classId=39&sequence=540
+
             var userClasses = userClassRepository.GetAll(userId)
-                                .Select(t => new UserClassModel {
-                                    UserId = t.UserId,
-                                    ClassId = t.ClassId})
-                                .ToArray();
+                            .Select(t =>
+                             {
+                                 var myClass = GetClass(t.ClassId);
+
+                                 return new UserClassModel
+                                 {
+                                     UserId = userId,
+                                     ClassId = t.ClassId,
+                                     ClassName = myClass.Name,
+                                     ClassDescription = myClass.Description,
+                                     ClassPrice = myClass.Price
+                                 };
+                             })
+                            .ToArray();
+
+
+            //var userClasses = userClassRepository.GetAll(userId)
+            //                    .Select(t => new UserClassModel {
+            //                        UserId = t.UserId,
+            //                        ClassId = t.ClassId})
+            //                    .ToArray();
 
             return userClasses;
         }

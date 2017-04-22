@@ -66,15 +66,27 @@ namespace TheLearningCenter.Controllers
             // var user = (TheLearningCenter.Models.UserModel)Session["User"];
 
             int userId = 1;
-            var userClasses = userClassManager.GetAll(userId)
-                         .Select(t => new TheLearningCenter.Models.UserClassModel(
-                              t.UserId,
-                              t.ClassId
-                              ))
-                        .ToArray();
+            //var userClasses = userClassManager.GetAll(userId)
+            //             .Select(t => new TheLearningCenter.Models.UserClassModel(
+            //                  t.UserId,
+            //                  t.ClassId
+            //                  ))
+            //            .ToArray();
+            //
+            // return View(userClasses);
 
-            return View(userClasses);
-            //return View(studenClassViewModel);
+
+            var studentClasses = userClassManager.GetAll(userId)
+                          .Select(t => new TheLearningCenter.Models.StudentClassesViewModel(
+                               t.UserId,
+                               t.ClassId,
+                               t.ClassName,
+                               t.ClassDescription,
+                               t.ClassPrice
+                               ))
+                         .ToArray();
+
+            return View(studentClasses);
         }
 
         [HttpGet]
