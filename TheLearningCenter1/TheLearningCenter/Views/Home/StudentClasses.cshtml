@@ -11,29 +11,30 @@
 
 <div>
     <h1>Student Classes</h1>
+    <hr/>
 </div>
 
-@if (Model.Length > 0)
-{
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Paid</th>
-            </tr>
-        </thead>
-        @foreach (var studentClass in Model)
-        {
-            <tr>
-                <td>@studentClass.ClassName</td>
-                <td>@studentClass.ClassDescription</td>
-                <td>@studentClass.ClassPaid</td>
-            </tr>
-        }
-    </table>
-}
-else
-{
-    <h2>No classes found for this User.</h2>
-}
+<div class='container'>
+    @if (Model.Length > 0)
+    {
+        <div class='container'>
+            <row>
+                <div class='col-md-3 myborder mybold'>Name</div>
+                <div class='col-md-7 myborder mybold'>Description</div>
+                <div class='col-md-2 myborder mybold'>Paid</div>
+            </row>
+            @foreach (var studentClass in Model)
+            {
+                <row>
+                    <div class='col-md-3  myborder'>@studentClass.ClassName</div>
+                    <div class='col-md-7  myborder'>@studentClass.ClassDescription</div>
+                    <div class='col-md-2  myborder'>@studentClass.ClassPaid</div>
+                </row>
+            }
+        </div>
+    }
+    else
+    {
+        <h2>No classes found for this User.</h2>
+    }
+</div>

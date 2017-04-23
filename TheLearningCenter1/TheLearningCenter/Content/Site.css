@@ -22,3 +22,18 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.myborder {
+  border-bottom: 1px solid #d6d6c2;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 3px;
+}
+
+.mybold {
+    font-weight: bold;
+}
+
+.myhr {
+    color: #d6d6c2 ;
+}
