@@ -9,6 +9,7 @@ using TheLearningCenter.Models;
 
 namespace TheLearningCenter.Controllers
 {
+    [Logging]
     [Authorize]
     public class HomeController : Controller
     {
@@ -22,7 +23,11 @@ namespace TheLearningCenter.Controllers
             this.userClassManager = userClassManager;
         }
         public ActionResult Index()
-        { 
+        {
+            // temporary test of Global Exception Handling
+            // int x = 1;       // add me
+            // x = x / (x - 1); // add me
+
             return View();   // Home page
         }
 

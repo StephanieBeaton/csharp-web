@@ -24,7 +24,7 @@
                 <option value="">Choose a class</option>
                 @foreach (var classMaster in Model.ClassMasters)
                 {
-                <option value=@classMaster.Id.ToString()>@classMaster.Name</option>
+                    <option value=@classMaster.Id.ToString()>@classMaster.Name</option>
                 }
             </select>
             <input type="submit" value="Add Class" />

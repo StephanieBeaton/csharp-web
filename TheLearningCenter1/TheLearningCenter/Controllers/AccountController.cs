@@ -13,6 +13,7 @@ using TheLearningCenter.Business;
 
 namespace TheLearningCenter.Controllers
 {
+    [Logging]
     [Authorize]
     public class AccountController : Controller
     {
@@ -22,7 +23,6 @@ namespace TheLearningCenter.Controllers
         //public AccountController()
         //{
         //}
-
 
         private IUserLoginManager userLoginManager;
 
@@ -69,6 +69,7 @@ namespace TheLearningCenter.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+
 
         [HttpPost]
         [AllowAnonymous]

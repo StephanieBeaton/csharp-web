@@ -1,0 +1,117 @@
+5/7/2017 2:11:23 PM : Elapsed=00:00:15.2347777 : Action=Index
+
+5/7/2017 2:14:13 PM : Elapsed=00:00:00.0186234 : Action=LogIn
+
+5/7/2017 2:14:25 PM : Elapsed=00:00:00.2535808 : Action=Login
+
+5/7/2017 2:14:25 PM : Elapsed=00:00:00.0003057 : Action=Index
+
+5/7/2017 2:14:32 PM : Elapsed=00:00:00.0127530 : Action=ClassList
+
+5/7/2017 2:14:35 PM : Elapsed=00:00:00.0000200 : Action=Index
+
+5/7/2017 2:14:37 PM : Elapsed=00:00:00.1520059 : Action=StudentClasses
+
+5/7/2017 2:14:40 PM : Elapsed=00:00:00.0000115 : Action=Index
+
+5/7/2017 2:14:41 PM : Elapsed=00:00:00.0018209 : Action=EnrollInClass
+
+5/7/2017 2:14:44 PM : Elapsed=00:00:00.0000098 : Action=Index
+
+5/7/2017 2:14:46 PM : Elapsed=00:00:00.0019128 : Action=StudentClasses
+
+5/7/2017 2:14:50 PM : Elapsed=00:00:00.0000124 : Action=Index
+
+5/7/2017 2:14:51 PM : Elapsed=00:00:00.0007714 : Action=EnrollInClass
+
+5/7/2017 2:14:55 PM : Elapsed=00:00:00.1596669 : Action=EnrollInClass
+
+5/7/2017 2:14:55 PM : Elapsed=00:00:00.0056989 : Action=StudentClasses
+
+5/7/2017 2:14:58 PM : Elapsed=00:00:00.0003789 : Action=LogOff
+
+5/7/2017 2:14:58 PM : Elapsed=00:00:00.0000389 : Action=LogIn
+
+5/7/2017 2:18:15 PM : Elapsed=00:00:00.0149973 : Action=LogIn
+5/7/2017 2:18:28 PM : Elapsed=00:00:01.6962152 : Action=Login
+5/7/2017 2:18:28 PM : Elapsed=00:00:00.0003562 : Action=Index
+5/7/2017 2:18:35 PM : Elapsed=00:00:00.0305122 : Action=ClassList
+5/7/2017 2:18:37 PM : Elapsed=00:00:00.0000222 : Action=Index
+5/7/2017 2:18:39 PM : Elapsed=00:00:00.0470931 : Action=StudentClasses
+5/7/2017 2:18:41 PM : Elapsed=00:00:00.0000094 : Action=Index
+5/7/2017 2:18:42 PM : Elapsed=00:00:00.0017050 : Action=EnrollInClass
+5/7/2017 2:18:46 PM : Elapsed=00:00:00.4156687 : Action=EnrollInClass
+5/7/2017 2:18:46 PM : Elapsed=00:00:00.0034930 : Action=StudentClasses
+5/7/2017 2:18:48 PM : Elapsed=00:00:00.0003874 : Action=LogOff
+5/7/2017 2:18:48 PM : Elapsed=00:00:00.0000153 : Action=LogIn
+5/7/2017 3:03:50 PM : Elapsed=00:00:00.0151393 : Action=LogIn
+5/7/2017 3:04:21 PM : Elapsed=00:00:01.8089236 : Action=Login
+5/7/2017 3:04:21 PM : Elapsed=00:00:00.0004768 : Action=Index
+5/7/2017 3:04:28 PM : Elapsed=00:00:00.0004161 : Action=LogOff
+5/7/2017 3:04:28 PM : Elapsed=00:00:00.0000337 : Action=LogIn
+5/7/2017 3:05:55 PM : Elapsed=00:00:00.0009917 : Action=Login
+5/7/2017 3:07:37 PM : Elapsed=00:00:00.0000158 : Action=Login
+5/7/2017 3:09:01 PM : Elapsed=00:00:00.0000153 : Action=Login
+5/7/2017 3:59:02 PM : Elapsed=00:00:00.0156525 : Action=LogIn
+5/7/2017 3:59:22 PM : Elapsed=00:00:00.3153532 : Action=Login
+5/7/2017 3:59:22 PM : Elapsed=00:00:00.0004494 : Action=Index
+5/7/2017 3:59:29 PM : Elapsed=00:00:00.0126786 : Action=ClassList
+5/7/2017 3:59:32 PM : Elapsed=00:00:00.0000235 : Action=Index
+5/7/2017 3:59:34 PM : Elapsed=00:00:00.0282606 : Action=StudentClasses
+5/7/2017 3:59:40 PM : Elapsed=00:00:00.0000098 : Action=Index
+5/7/2017 3:59:42 PM : Elapsed=00:00:00.0007526 : Action=ClassList
+5/7/2017 4:01:16 PM : Elapsed=00:00:00.0008091 : Action=ClassList
+5/7/2017 4:01:18 PM : Elapsed=00:00:00.0006004 : Action=ClassList
+5/7/2017 4:01:19 PM : Elapsed=00:00:00.0005846 : Action=ClassList
+5/7/2017 4:01:41 PM : Elapsed=00:00:00.0000115 : Action=Index
+5/7/2017 4:01:43 PM : Elapsed=00:00:00.0004811 : Action=LogOff
+5/7/2017 4:01:43 PM : Elapsed=00:00:00.0000158 : Action=LogIn
+5/7/2017 4:01:52 PM : Elapsed=00:00:00.0012756 : Action=Login
+5/7/2017 4:01:52 PM : Elapsed=00:00:00.0000188 : Action=Index
+5/7/2017 4:01:55 PM : Elapsed=00:00:00.0007907 : Action=StudentClasses
+5/7/2017 4:03:34 PM : Elapsed=00:00:00.0000461 : Action=LogIn
+5/7/2017 4:03:44 PM : Elapsed=00:00:00.0013252 : Action=Login
+5/7/2017 4:03:44 PM : Elapsed=00:00:00.0000124 : Action=Index
+5/7/2017 4:03:47 PM : Elapsed=00:00:00.0008352 : Action=StudentClasses
+5/7/2017 4:05:51 PM : Elapsed=00:00:00.0141052 : Action=Index
+5/7/2017 4:05:57 PM : Elapsed=00:00:00.0013731 : Action=LogOff
+5/7/2017 4:05:57 PM : Elapsed=00:00:00.0034862 : Action=LogIn
+5/7/2017 4:06:29 PM : Elapsed=00:00:00.3052144 : Action=Login
+5/7/2017 4:06:29 PM : Elapsed=00:00:00.0000235 : Action=Index
+5/7/2017 4:10:58 PM : Elapsed=00:04:26.8000165 : Action=StudentClasses
+5/7/2017 4:11:20 PM : Elapsed=00:00:00.0000256 : Action=LogOff
+5/7/2017 4:11:20 PM : Elapsed=00:00:00.0000153 : Action=LogIn
+5/7/2017 4:11:22 PM : Elapsed=00:00:00.0013287 : Action=Login
+5/7/2017 4:11:46 PM : Elapsed=00:00:00.0014420 : Action=Login
+5/7/2017 4:11:46 PM : Elapsed=00:00:00.0000081 : Action=Index
+5/7/2017 4:11:53 PM : Elapsed=00:00:05.8492808 : Action=StudentClasses
+5/7/2017 4:12:05 PM : Elapsed=00:00:00.0000252 : Action=LogOff
+5/7/2017 4:12:05 PM : Elapsed=00:00:00.0000132 : Action=LogIn
+5/7/2017 4:12:30 PM : Elapsed=00:00:00.0014104 : Action=Login
+5/7/2017 4:12:30 PM : Elapsed=00:00:00.0000081 : Action=Index
+5/7/2017 4:12:56 PM : Elapsed=00:00:24.7971088 : Action=StudentClasses
+5/7/2017 4:19:28 PM : Elapsed=00:00:00.0132149 : Action=Index
+5/7/2017 4:19:33 PM : Elapsed=00:00:00.0010691 : Action=LogOff
+5/7/2017 4:19:33 PM : Elapsed=00:00:00.0045741 : Action=LogIn
+5/7/2017 4:19:45 PM : Elapsed=00:00:00.2482852 : Action=Login
+5/7/2017 4:19:45 PM : Elapsed=00:00:00.0000200 : Action=Index
+5/7/2017 4:19:46 PM : Elapsed=00:00:00.0276144 : Action=StudentClasses
+5/7/2017 4:19:50 PM : Elapsed=00:00:00.0000119 : Action=Index
+5/7/2017 4:19:52 PM : Elapsed=00:00:00.0102431 : Action=ClassList
+5/7/2017 4:19:56 PM : Elapsed=00:00:00.0000102 : Action=Index
+5/7/2017 4:19:57 PM : Elapsed=00:00:00.0007252 : Action=StudentClasses
+5/7/2017 4:19:59 PM : Elapsed=00:00:00.0000081 : Action=Index
+5/7/2017 4:20:00 PM : Elapsed=00:00:00.0016836 : Action=EnrollInClass
+5/7/2017 4:20:03 PM : Elapsed=00:00:00.0013471 : Action=EnrollInClass
+5/7/2017 4:20:06 PM : Elapsed=00:00:00.0150452 : Action=EnrollInClass
+5/7/2017 4:20:06 PM : Elapsed=00:00:00.0006821 : Action=StudentClasses
+5/7/2017 4:22:20 PM : Elapsed=00:00:00.0131832 : Action=Index
+5/7/2017 4:22:29 PM : Elapsed=00:00:00.0010588 : Action=LogOff
+5/7/2017 4:22:29 PM : Elapsed=00:00:00.0033998 : Action=LogIn
+5/7/2017 4:22:49 PM : Elapsed=00:00:01.7371861 : Action=Login
+5/7/2017 4:22:49 PM : Elapsed=00:00:00.0000196 : Action=Index
+5/7/2017 4:22:51 PM : Elapsed=00:00:00.1637775 : Action=StudentClasses
+5/7/2017 4:22:53 PM : Elapsed=00:00:00.0000089 : Action=Index
+5/7/2017 4:22:57 PM : Elapsed=00:00:00.0302256 : Action=EnrollInClass
+5/7/2017 4:23:02 PM : Elapsed=00:00:00.1941592 : Action=EnrollInClass
+5/7/2017 4:23:02 PM : Elapsed=00:00:00.0021070 : Action=StudentClasses

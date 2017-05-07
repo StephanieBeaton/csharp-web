@@ -20,6 +20,11 @@ namespace TheLearningCenter.Repository
     {
         public int UserId { get; set; }
         public int ClassId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public int Sessions { get; set; }
+
     }
 
     class UserClassRepository : IUserClassRepository
@@ -41,11 +46,27 @@ namespace TheLearningCenter.Repository
             return new UserClassModel { UserId = userId, ClassId = classId };
         }
 
-        public UserClassModel[] GetAll(int userId)
+    public UserClassModel[] GetAll(int userId)
         {
-            var userClasses = DatabaseAccessor.Instance.RetrieveClassesForStudent(userId)
-                                        .Select(t => new UserClassModel { UserId = t.UserId, ClassId = t.ClassId })
-                                        .ToArray();
+            // this code calls a Stored Procedure in the database
+            //
+            //var userClasses = DatabaseAccessor.Instance.RetrieveClassesForStudent(userId)
+            //                            .Select(t => new UserClassModel { UserId = t.UserId, ClassId = t.ClassId })
+            //                            .ToArray();
+
+            var userClasses = DatabaseAccessor.Instance.Users.First(t => t.UserId == userId)
+                      .ClassMasters.Select(t =>
+                            new UserClassModel
+                            {
+                                UserId = userId,
+                                ClassId = t.ClassId,
+                                Name = t.ClassName,
+                                Description = t.ClassDescription,
+                                Price = t.ClassPrice,
+                                Sessions = t.ClassSessions
+                            })
+                      .ToArray();
+
             return userClasses;
         }
 

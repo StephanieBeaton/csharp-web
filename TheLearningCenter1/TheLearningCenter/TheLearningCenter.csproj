@@ -176,11 +176,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoggingAttribute.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClassMasterModel.cs" />
     <Compile Include="Models\ClassMasterViewModel.cs" />
@@ -256,6 +258,7 @@
     <Content Include="Views\Home\EnrollInClass.cshtml" />
     <Content Include="Views\Home\StudentClasses.cshtml" />
     <Content Include="Views\Account\LoginMvcOriginal.cshtml" />
+    <Content Include="Views\Error\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
